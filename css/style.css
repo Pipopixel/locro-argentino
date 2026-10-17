@@ -1,0 +1,30 @@
+header {
+  color:coral;background-color:#800032;
+  font-size: 50px;text-decoration: underline;
+  text-align: center;
+  font-family: initial;
+}
+.ing {color: rgba(0, 255, 255, 0.548);}
+.pre {color: rgb(160, 170, 17);}
+.mate {color: rgb(255, 255, 255);}
+.cocina {color: rgb(255, 255, 255);}
+body {
+  background-color: black;
+}
+  aside {
+    display:flex;text-align: center;justify-content: space-between;padding: 30;flex-wrap: wrap;
+  }
+  .mapa {
+    display: flex;
+  }
+  form {
+    display: flex;justify-content: center;justify-content: space-evenly;
+    background-color: black;
+  }
+  body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWyhAzbP5FCFjzBpyvjtvUMIyIBTxBhpslAs0zHEKTQ&s=10');
+  background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
+  background-position: center center; /* Centra la imagen */
+  background-size: cover;          /* Ajusta la imagen para que cubra todo el espacio */
+  background-attachment: fixed;    /* Mantiene el fondo fijo al hacer scroll */
+}
