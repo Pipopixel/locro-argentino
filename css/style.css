@@ -12,12 +12,15 @@ body {
   background-color: black;
 }
   aside {
-    display:flex;text-align: center;justify-content: space-between;padding: 30;flex-wrap: wrap;
+    display:flex;text-align: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .mapa {
     display: flex;
   }
-  form {
+  footer {
     display: flex;justify-content: center;justify-content: space-evenly;
     background-color: black;
   }
