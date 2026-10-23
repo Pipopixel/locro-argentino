@@ -1,13 +1,18 @@
 header {
   color:coral;background-color:#800032;
-  font-size: 50px;text-decoration: underline;
+  text-decoration: underline;
+    font-size: 20px;
   text-align: center;
-  font-family: initial;
+  display: flex;
+  flex-wrap: wrap; 
 }
 .ing {color: rgba(0, 255, 255, 0.548);}
 .pre {color: rgb(160, 170, 17);}
 .mate {color: rgb(255, 255, 255);}
 .cocina {color: rgb(255, 255, 255);}
+div {width: 10px;
+height: 10px;
+}
 body {
   background-color: black;
 }
@@ -23,7 +28,7 @@ body {
   footer {
     display: flex;justify-content: center;justify-content: space-evenly;
     background-color: black;
-    justify-content: space-around;
+    flex-wrap: wrap;
   }
   body {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWyhAzbP5FCFjzBpyvjtvUMIyIBTxBhpslAs0zHEKTQ&s=10');
@@ -31,4 +36,5 @@ body {
   background-position: center center; /* Centra la imagen */
   background-size: cover;          /* Ajusta la imagen para que cubra todo el espacio */
   background-attachment: fixed;    /* Mantiene el fondo fijo al hacer scroll */
+  
 }
