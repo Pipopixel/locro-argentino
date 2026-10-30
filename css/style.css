@@ -13,7 +13,7 @@ justify-content: space-evenly;
 flex-wrap: wrap;
 }
 .ing {color: rgba(0, 255, 255, 0.548);}
-.pre {color: rgb(160, 170, 17);}
+.pre {color: rgb(95, 183, 255);}
 .mate {color: rgb(255, 255, 255);}
 .cocina {color: rgb(255, 255, 255);}
 div {display: flex;
@@ -24,12 +24,31 @@ height: 70px;
 width: 100px;
 height: 100px;
 }
+.empanada {
+display: flex;
+justify-content: space-around;
+gap: 100px;
+align-items: center; 
+}
 .redes {
 display: flex;
 width: 80px;
 height: 80px;
 justify-content: flex-end;
 text-align: center;
+flex-wrap: wrap;
+}
+.ig {
+  width: 80px;
+height: 80px;
+}
+.youtube {
+  width: 80px;
+height: 80px;
+}
+.face {
+  width: 80px;
+height: 80px;
 }
   aside {
     display:flex;
