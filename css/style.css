@@ -1,6 +1,22 @@
+/* RESET: va primero para no pisar el resto de las reglas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWyhAzbP5FCFjzBpyvjtvUMIyIBTxBhpslAs0zHEKTQ&s=10');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---------- HEADER ---------- */
 header {
-  color:rgb(207, 65, 65);
-  background-color:#800032;
+  color: rgb(207, 65, 65);
+  background-color: #800032;
   text-decoration: underline;
   font-size: 20px;
   align-items: center;
@@ -8,75 +24,178 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-nav {display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
+header div {
+  display: flex;
+  gap: 10px;
 }
-.ing {color: rgba(0, 255, 255, 0.548);}
-.pre {color: rgb(95, 183, 255);}
-.mate {color: rgb(255, 255, 255);}
-.cocina {color: rgb(255, 255, 255);}
-div {display: flex;
-width: 70px;
-height: 70px;
+header div img {
+  width: 70px;
+  height: 70px;
+}
+h1 { background-color: darkred; }
+h1:hover {
+  color: black;
+  background-color: white;
+  transition: all .9s ease-in-out;
 }
 .logo {
-width: 100px;
-height: 100px;
+  width: 100px;
+  height: 100px;
 }
+.logo:hover {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ing { color: rgba(0, 255, 255, 0.548); }
+.pre { color: rgb(95, 183, 255); }
+.mate { color: rgb(255, 255, 255); }
+.cocina { color: rgb(255, 255, 255); }
+
 .empanada {
-display: flex;
-justify-content: space-around;
-gap: 100px;
-align-items: center; 
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  align-items: center;
 }
-.redes {
-display: flex;
-width: 80px;
-height: 80px;
-justify-content: flex-end;
-text-align: center;
-flex-wrap: wrap;
+
+/* ---------- LAYOUT PRINCIPAL ---------- */
+.contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
 }
-.ig {
+
+/* SECTION (cuadro rojo izquierdo) */
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 0;
+  gap: 15px;
+  padding: 15px;
+  border: 3px solid red;
+}
+
+/* Cuadro morado: ingredientes (alto automático según el contenido) */
+.ingredientes {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid purple;
+  overflow-wrap: break-word;
+}
+
+/* Cuadro verde: preparación */
+.preparacion {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid green;
+  overflow-wrap: break-word;
+}
+
+.ingredientes h2,
+.preparacion h2 {
+  margin-bottom: 10px;
+}
+
+/* El reset quita el padding de las listas: lo devolvemos para ver las viñetas */
+ul {
+  padding-left: 25px;
+}
+
+/* Cuadro azul chico: foto */
+.foto {
+  width: 150px;
+  height: 100px;
+  border: 3px solid blue;
+  align-self: flex-start;
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ASIDE (cuadro azul derecho) */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: 3px solid blue;
+  overflow: hidden;
+}
+
+/* Cuadro rojo interno: video (sirve para class="videos" y class="video") */
+.videos,
+.video {
+  position: relative;
+  width: 90%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 3px solid red;
+  overflow: hidden;
+}
+/* El iframe se pega a las 4 esquinas del cuadro rojo, sin importar los width/height del HTML */
+.videos iframe,
+.video iframe,
+aside iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  border: none;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+.a {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.instagram,
+.youtube,
+.facebook {
   width: 80px;
-height: 80px;
+  height: 80px;
 }
-.youtube {
-  width: 80px;
-height: 80px;
+.mapa {
+  display: flex;
+  width: 600px;
+  height: 300px;
 }
-.face {
-  width: 80px;
-height: 80px;
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
-  aside {
-    display:flex;
-    text-align: center;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .mapa {
-display: flex;
-width: 600px;
-height: 300px;
-  }
-  footer {
-   display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-  }
-  body {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWyhAzbP5FCFjzBpyvjtvUMIyIBTxBhpslAs0zHEKTQ&s=10');
-  background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
-  background-position: center center; /* Centra la imagen */
-  background-size: cover;          /* Ajusta la imagen para que cubra todo el espacio */
-  background-attachment: fixed;    /* Mantiene el fondo fijo al hacer scroll */
-  }
-  .nombre {
-    display: flex;
-    font-size: 40px;
-  }
+.nombre {
+  display: flex;
+  font-size: 40px;
+}
+.ing {color: chartreuse;}
+.pre {color: rgba(0, 0, 0, 0.747);}
+.mate {color: #6e062ebe;}
+.pe {color:rgb(13, 75, 13)}
