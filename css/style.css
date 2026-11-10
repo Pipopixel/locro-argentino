@@ -54,10 +54,11 @@ nav {
   flex-wrap: wrap;
 }
 
-.ing { color: rgba(0, 255, 255, 0.548); }
-.pre { color: rgb(95, 183, 255); }
-.mate { color: rgb(255, 255, 255); }
+.ing { color: chartreuse; }
+.pre { color: rgba(0, 0, 0, 0.747); }
+.mate { color: #6e062ebe; }
 .cocina { color: rgb(255, 255, 255); }
+.pe { color: rgb(13, 75, 13); }
 
 .empanada {
   display: flex;
@@ -90,7 +91,9 @@ section {
 
 /* Cuadro morado: ingredientes (alto automático según el contenido) */
 .ingredientes {
+  display: block;   /* título arriba, lista abajo (no lado a lado) */
   width: 100%;
+  height: auto;     /* que crezca con el contenido */
   padding: 15px;
   border: 3px solid purple;
   overflow-wrap: break-word;
@@ -98,7 +101,9 @@ section {
 
 /* Cuadro verde: preparación */
 .preparacion {
+  display: block;
   width: 100%;
+  height: auto;
   padding: 15px;
   border: 3px solid green;
   overflow-wrap: break-word;
@@ -147,13 +152,14 @@ aside {
 .videos,
 .video {
   position: relative;
+  display: block;
   width: 90%;
-  max-width: 100%;
+  height: auto;            /* el alto lo da el aspect-ratio */
   aspect-ratio: 16 / 9;
   border: 3px solid red;
   overflow: hidden;
 }
-/* El iframe se pega a las 4 esquinas del cuadro rojo, sin importar los width/height del HTML */
+/* El iframe se pega a las 4 esquinas del cuadro rojo */
 .videos iframe,
 .video iframe,
 aside iframe {
@@ -182,6 +188,7 @@ aside iframe {
 .mapa {
   display: flex;
   width: 600px;
+  max-width: 100%;
   height: 300px;
 }
 footer {
@@ -199,3 +206,10 @@ footer {
 .pre {color: rgba(0, 0, 0, 0.747);}
 .mate {color: #6e062ebe;}
 .pe {color:rgb(13, 75, 13)}
+.empanada {
+  display: flex;
+}
+.a{
+  width: 100px;
+  height: 100px;
+}
