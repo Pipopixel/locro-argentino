@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap');
+h1 { 
+  font-family: "Tiny5 Duo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  }
+
+/* RESET: va primero para no pisar el resto de las reglas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWyhAzbP5FCFjzBpyvjtvUMIyIBTxBhpslAs0zHEKTQ&s=10');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  color: rgb(207, 65, 65);
+  background-color: #800032;
+  text-decoration: underline;
+  font-size: 20px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+header div {
+  display: flex;
+  gap: 10px;
+}
+header div img {
+  width: 70px;
+  height: 70px;
+}
+h1 { background-color: darkred; }
+h1:hover {
+  color: black;
+  background-color: white;
+  transition: all .9s ease-in-out;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.logo:hover {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ing { color: chartreuse; }
+.pre { color: rgba(0, 0, 0, 0.747); }
+.mate { color: #6e062ebe; }
+.cocina { color: rgb(255, 255, 255); }
+.pe { color: rgb(13, 75, 13); }
+
+.empanada {
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  align-items: center;
+}
+
+/* ---------- LAYOUT PRINCIPAL ---------- */
+.contenedor-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* SECTION (cuadro rojo izquierdo) */
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 0;
+  gap: 15px;
+  padding: 15px;
+  border: 3px solid red;
+}
+
+/* Cuadro morado: ingredientes (alto automático según el contenido) */
+.ingredientes {
+  display: block;   /* título arriba, lista abajo (no lado a lado) */
+  width: 100%;
+  height: auto;     /* que crezca con el contenido */
+  padding: 15px;
+  border: 3px solid purple;
+  overflow-wrap: break-word;
+}
+
+/* Cuadro verde: preparación */
+.preparacion {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border: 3px solid green;
+  overflow-wrap: break-word;
+}
+
+.ingredientes h2,
+.preparacion h2 {
+  margin-bottom: 10px;
+}
+
+/* El reset quita el padding de las listas: lo devolvemos para ver las viñetas */
+ul {
+  padding-left: 25px;
+}
+
+/* Cuadro azul chico: foto */
+.foto {
+  width: 150px;
+  height: 100px;
+  border: 3px solid blue;
+  align-self: flex-start;
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ASIDE (cuadro azul derecho) */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: 3px solid blue;
+  overflow: hidden;
+}
+
+/* Cuadro rojo interno: video (sirve para class="videos" y class="video") */
+.videos,
+.video {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;            /* el alto lo da el aspect-ratio */
+   aspect-ratio: 60 / 40;
+  border: 3px solid red;
+  overflow: hidden;
+}
+/* El iframe se pega a las 4 esquinas del cuadro rojo */
+.videos iframe,
+.video iframe,
+aside iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  border: none;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+.a {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.instagram,
+.youtube,
+.facebook {
+  width: 80px;
+  height: 80px;
+}
+.mapa {
+  display: flex;
+  width: 600px;
+  max-width: 100%;
+  height: 300px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.nombre {
+  display: flex;
+  font-size: 40px;
+}
+.ing {color: chartreuse;}
+.pre {color: rgba(0, 0, 0, 0.747);}
+.mate {color: #6e062ebe;}
+.pe {color:rgb(13, 75, 13)}
+.empanada {
+  display: flex;
+}
+.a{
+  width: 100px;
+  height: 100px;
+}
