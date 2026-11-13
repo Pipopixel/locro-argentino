@@ -160,9 +160,9 @@ aside {
 .video {
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
   height: auto;            /* el alto lo da el aspect-ratio */
-  aspect-ratio: 16 / 9;
+   aspect-ratio: 60 / 40;
   border: 3px solid red;
   overflow: hidden;
 }
